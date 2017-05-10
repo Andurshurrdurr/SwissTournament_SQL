@@ -11,7 +11,9 @@ pip install passlib
 pip install itsdangerous
 pip install flask-httpauth
 su postgres -c 'createuser -dRS vagrant'
+su vagrant -c 'createdb'
 su vagrant -c 'createdb tournament'
+su vagrant -c 'psql tournament -f /home/vagrant/synced/tournament.sql'
 
 vagrantTip="[35m[1mThe shared directory is located at ~/synced/\nTo access your shared files: cd ~/synced/(B[m"
 echo -e $vagrantTip > /etc/motd
