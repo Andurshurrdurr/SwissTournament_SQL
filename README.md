@@ -19,14 +19,12 @@ Instructions on getting a local copy of the project running for development and 
 4. Open a terminal and cd into the cloned repository
 5. Get the VM running with Vagrant `$ vagrant up` - This may take a while
 6. The VM should now be running, SSH into it `$ vagrant ssh`
-7. Once you are running ssh to the vm, you have to initiate the database. First connect to psql shell `$ psql`
-8. Create the database `=> CREATE DATABASE tournament;`, psql should return `CREATE DATABASE`
-9. Exit the psql shell`=> \q`. Now python should be able to connect to the tournament database and run queries.
+7. The database and tables should be set up correctly, and python should be installed with the correct dependencies - Run the tests and start developing!
 
 ### Running the tests
 
 1. Cd into the synced folder located at ~/synced/ `$ cd ~/synced/`
-2. Run the python tests to see if the code works: `$ python tournament_test.py`
+2. Run the python tests to see if the code and postgres works as it should: `$ python tournament_test.py`
 3. You can now develop the code in the synced folder on the host machine, and test it in the virtual environment by using vagrant. Pretty awesome!
 
 ## About Udacity
